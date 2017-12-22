@@ -1,10 +1,16 @@
 body {
-	background-color: black;
+	background-color: #29190f;
 }
 .jumbotron {
 	margin-top: 20px;
 	background-image: url("../images/clue_drawn.jpg");
 	background-size: cover;
 	background-position: center top;
-	height:400px;
+	height:397px;
+}
+
+.jumbotron h1 {
+	margin-top: -15px;
+	color: #29190f;
+	font-weight: bold;
 }
