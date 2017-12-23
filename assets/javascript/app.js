@@ -13,6 +13,7 @@
 // };
 $(document).ready(function(){
 	$(".mainContent").hide();
+	$(".finalContent").hide();
 
 	var questions = [
 		"In what year was the original movie Clue first released in theaters?",
@@ -46,15 +47,32 @@ $(document).ready(function(){
 	var rightAnswers = 0;
 	var wrongAnswers = 0;
 	var nonAnswers = 0;
-	// var hideDescrip = function(){
-	// 	$(".description").hide ()
-	// };
+
 
 	console.log(questions[0]);
+
+//timer
+	var totalTime = 45;
+	var timeCounter = setInterval(timer, 1000);
+	function timer (){
+		totalTime --;
+		  if (count <= 0) {
+
+		  }
+		     clearInterval(counter);
+		     return;
+		  
+	}
+
 
 	$(".startBtn").on('click', function (event){
 		$(".intro").hide();
 		$(".mainContent").show();
+		$(".timer").html("<h4>Time Remaining: </h4>" + timeCounter);
+		timer ();
 	});
+
+
+
 
 });//closes document.ready function
