@@ -14,3 +14,10 @@ body {
 	color: #29190f;
 	font-weight: bold;
 }
+
+.btn {
+	background-color: #29190f;
+	display: inline-block;
+	text-align: center;
+
+}
