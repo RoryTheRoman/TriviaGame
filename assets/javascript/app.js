@@ -52,8 +52,8 @@ $(document).ready(function(){
 
 	console.log(questions[0]);
 
-	$("button").on('click', function (event){
-		// event.preventDefault();
+	$(".startBtn").on('click', function (event){
+		$(".intro").hide();
 		$(".mainContent").show();
 	});
 
