@@ -48,19 +48,25 @@ $(document).ready(function(){
 	var wrongAnswers = 0;
 	var nonAnswers = 0;
 
+	var answer = $("<h4>");
 
 	console.log(questions[0]);
 
+
 //timer
-	var totalTime = 45;
+	var totalTime = 100;
 	var timeCounter = setInterval(timer, 1000);
 	function timer (){
-		totalTime --;
-		  if (count <= 0) {
+		$(".timer").html("<h4>Time Remaining: </h4>" + totalTime);
 
-		  }
-		     clearInterval(counter);
+		totalTime --;
+		  if (totalTime <= 0) {
+		$(".finalContent").show();
+		$(".mainContent").hide();
+		clearInterval(timeCounter);
 		     return;
+		  }
+		     
 		  
 	}
 
@@ -70,6 +76,12 @@ $(document).ready(function(){
 		$(".mainContent").show();
 		$(".timer").html("<h4>Time Remaining: </h4>" + timeCounter);
 		timer ();
+		for (var i = 0; i < questions.length; i++) {
+		var qDiv = $("<div>");
+		var qText = $("<h3>").text(questions[i]);
+		var actQuestions = qDiv.append(qText);
+		$(".qNa").append(qDiv);
+	}
 	});
 
 
