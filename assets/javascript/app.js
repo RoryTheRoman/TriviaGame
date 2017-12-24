@@ -77,27 +77,22 @@ $(document).ready(function(){
 		timer ();
 		for (var i = 0; i < questions.length; i++) {
 		var qDiv = $("<div>");
+		// var aDiv = $("<label class='checkbox-inline'><input type='checkbox' value=''>");
+		qDiv.append(aDiv);
 		var qText = $("<h3>").text(questions[i]);
 		qDiv.append(qText);
 		var actQuestions = $(".qNa").append(qDiv);
-			for (var j = 0; j < answers.length; j++) { 
+			for (var j = 0; j < answers[i].length; j++) { 
 			var aDiv = $("<label class='checkbox-inline'><input type='checkbox' value=''>");
-			var aText = $("<h4>").text(answers[j]);
+			var aText = $("<h4>").text(answers[i][j]);
 			var actAnswers = aDiv.append(aText);
 			actQuestions.append(actAnswers);
 
 
 			}
 		}
-		// for (var j = 0; j < answers.length; j++) { 
-		// 	var aDiv = $("<div>");
-		// 	var aText = $("<h4>").text(answers[j]);
-		// 	var actAnswers = aDiv.append(aText);
-		// 	actQuestions.append(actAnswers);
 
-
-		// }
-	});
+	});//closes click function
 
 
 
