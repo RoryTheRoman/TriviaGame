@@ -83,12 +83,11 @@ $(document).ready(function(){
 		qDiv.append(qText);
 		var actQuestions = $(".qNa").append(qDiv);
 			for (var j = 0; j < answers[i].length; j++) { 
-			var aDiv = $("<label class='checkbox-inline'><input type='checkbox' value=''>");
+			var aDiv = $("<label class='radio'><input type='radio' name='radio-answer' value=' '>");
+			// var aDiv = $("<label class='input-group'><span class='input-group'><input type='radio' value='false'>");
 			var aText = $("<h4>").text(answers[i][j]);
 			var actAnswers = aDiv.append(aText);
 			actQuestions.append(actAnswers);
-
-
 			}
 		}
 

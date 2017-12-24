@@ -21,3 +21,10 @@ body {
 	text-align: center;
 
 }
+
+.radio {
+	margin-left: 30px;
+}
+.timer {
+	position: fixed;
+}
